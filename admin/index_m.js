@@ -109,7 +109,7 @@ async function initialize_Divs() {
     Checkbox.generateVarsForAllObjectsOfInstance = $('input[id="generateVarsForAllObjectsOfInstance"]');
     Checkbox.generateSetStateForReadOnly = $('input[id="generateSetStateForReadOnly"]');
 
-    var javascriptAdapter = await getObject("system.adapter.javascript.0");
+    var javascriptAdapter = await getObject("system.adapter.javascript.1");
     if (!javascriptAdapter) {
         // Javascript Adapter ist nicht installiert -> Button deaktivieren und info anzeigen
         Button.createJavaScript.attr('disabled', true);
@@ -1102,7 +1102,7 @@ function createJavascriptConfirm() {
 
 async function createJavascript() {
     try {
-        var javascriptAdapter = await getObject("system.adapter.javascript.0");
+        var javascriptAdapter = await getObject("system.adapter.javascript.1");
         if (javascriptAdapter) {
             // sofern javascript instanz vorhanden ist
 
@@ -1184,7 +1184,7 @@ async function createJavascript() {
                         name: Input.scriptName.val(),
                         expert: true,
                         engineType: "Javascript/js",
-                        engine: "system.adapter.javascript.0",
+                        engine: "system.adapter.javascript.1",
                         source: autoScript,
                         debug: false,
                         verbose: false,
